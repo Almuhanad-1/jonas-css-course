@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Layout</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        color: #343a40;
+        font-family: sans-serif;
+      }
+      body {
+        height: 100vh;
+        display: grid;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        grid-template-columns: 80px 400px 1fr 250px;
+        grid-template-rows: 80px 1fr;
+        /* justify-items: center; */
+      }
+      nav,
+      main,
+      aside {
+        padding-top: 24px;
+      }
+      nav {
+        background-color: #343a40;
+        color: #fff;
+        grid-row: 1/-1;
+      }
+      menu {
+        background-color: #7048e8;
+        grid-column: 2/-1;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 40px;
+      }
+      menu button {
+        display: inline-block;
+        background-color: #5f3dc4;
+        padding: 8px 12px;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        font-weight: bold;
+      }
+      menu button:last-child {
+        background-color: #d6336c;
+        margin-left: auto;
+      }
+
+      section {
+        background-color: #e9ecef;
+        overflow: scroll;
+      }
+      .inbox {
+        width: 300px;
+        background-color: #adb5bd;
+        margin: 40px auto;
+        padding: 32px 0;
+      }
+      main {
+      }
+      aside {
+        background-color: #e9ecef;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>Nav</nav>
+    <menu>
+      <button>New</button>
+      <button>Reply</button>
+      <button>Forward</button>
+      <button>Mark unread</button>
+      <button class="trash">Trash</button>
+    </menu>
+    <section>
+      <div class="inbox">New email</div>
+      <div class="inbox">New email</div>
+      <div class="inbox">New email</div>
+      <div class="inbox">New email</div>
+      <div class="inbox">New email</div>
+      <div class="inbox">New email</div>
+      <div class="inbox">New email</div>
+      <div class="inbox">New email</div>
+      <div class="inbox">New email</div>
+      <div class="inbox">New email</div>
+      <div class="inbox">New email</div>
+    </section>
+    <main>Email view</main>
+    <aside>Additional info</aside>
+  </body>
+</html>

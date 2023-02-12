@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+      /* 
+MAIN COLOR: #087f5b
+GREY COLOR: #343a40
+*/
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+      .carousel {
+        background-color: #087f5b;
+        color: #e6fcf5;
+        width: 700px;
+        height: 250px;
+        margin: 100px auto;
+        border-radius: 8px;
+        position: relative;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+      .carousel img {
+        position: absolute;
+        width: 250px;
+        height: 280px;
+        object-fit: cover;
+        left: 30px;
+        top: -15px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+      .testimonial {
+        /* padding-left: 320px; */
+        padding: 30px 50px 30px 320px;
+        line-height: 1.4;
+      }
+      .testimonial-text {
+        color: #e6fcf5;
+        margin-bottom: 30px;
+      }
+      .testimonial-author,
+      .testimonial-job {
+        color: #c3fae8;
+        font-size: 14px;
+      }
+
+      .left,
+      .right {
+        width: 36px;
+        stroke: #087f5b;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        padding: 6px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      .right {
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .left {
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="right"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5L8.25 12l7.5-7.5"
+        />
+      </svg>
+
+      <img src="photo.jpeg" alt="photo" class="photo" />
+      <div class="testimonial">
+        <p class="testimonial-text">
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem,
+          repudiandae nam provident veniam tempore expedita qui esse quo eos non
+          nostrum voluptatem et quod itaque ipsam dicta blanditiis."
+        </p>
+        <p class="testimonial-author">Almuhanad Alnihmy</p>
+        <p class="testimonial-job">Software Engineer</p>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="left"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 4.5l7.5 7.5-7.5 7.5"
+        />
+      </svg>
+    </div>
+  </body>
+</html>
